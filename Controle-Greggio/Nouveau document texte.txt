@@ -1,0 +1,50 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.0
+-- httpwww.phpmyadmin.net
+--
+-- Serveur localhost
+-- Généré le  Lun 30 Octobre 2023 à 1651
+-- Version du serveur 4.1.22
+-- Version de PHP 5.2.3
+
+SET SQL_MODE=NO_AUTO_VALUE_ON_ZERO;
+
+--
+-- Base de données `suivi`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `greggio`
+--
+
+CREATE TABLE IF NOT EXISTS `greggio` (
+  `id` int(20) NOT NULL auto_increment,
+  `article` varchar(20) NOT NULL default '',
+  `fournisseur` varchar(20) NOT NULL default '',
+  `lotfournisseur` text NOT NULL,
+  `lotinterne` varchar(20) NOT NULL default '',
+  `facture` text NOT NULL,
+  `datearrivage` datetime NOT NULL default '0000-00-00 000000',
+  `machine` varchar(20) NOT NULL default '',
+  `lfa1` varchar(20) NOT NULL default '',
+  `lfa2` varchar(20) NOT NULL default '',
+  `lfa3` varchar(20) NOT NULL default '',
+  `poids` decimal(6,2) NOT NULL default '0.00',
+  `largeur` varchar(20) NOT NULL default '',
+  `note` text NOT NULL,
+  `testteinture` varchar(20) NOT NULL default '',
+  `dispo_test` varchar(20) NOT NULL default '',
+  `date_control` datetime NOT NULL default '0000-00-00 000000',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Contenu de la table `greggio`
+--
+
+INSERT INTO `greggio` (`id`, `article`, `fournisseur`, `lotfournisseur`, `lotinterne`, `facture`, `datearrivage`, `machine`, `lfa1`, `lfa2`, `lfa3`, `poids`, `largeur`, `note`, `testteinture`, `dispo_test`, `date_control`) VALUES
+(1, 'MT1', 'GULLE', '', '', '', '0000-00-00 000000', 'test', '0', '0', '0', 0.00, '0', '', 'Ok', '', '2023-10-30 151302'),
+(2, '085', 'GULLE', '', '', '', '0000-00-00 000000', 'test', '0', '1', '1', 1.00, '1', 'fghjhfgjh', 'Ok', '', '2023-10-30 151417'),
+(3, '63E', 'SANKO', 'S241020823', 'B', 'DBS54', '2023-10-11 000000', '298', '41', '414', '414', 141.00, '1414141', '', 'Ok', '', '2023-10-30 151747');

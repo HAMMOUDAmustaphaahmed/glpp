@@ -1,0 +1,78 @@
+date/time         : 2023-10-28, 11:09:20, 649ms
+computer name     : TN-WSW10-00489
+user name         : ute1
+registered owner  : Admin
+operating system  : Windows NT New x64 build 9200
+system language   : French
+system up time    : 1 day 1 hour
+program up time   : 338 milliseconds
+processors        : 12x Intel(R) Core(TM) i5-10500 CPU @ 3.10GHz
+physical memory   : 1613/7938 MB (free/total)
+free disk space   : (C:) 68,02 GB (W:) 6,30 GB
+display mode      : 1920x1080, 32 bit
+process id        : $1e1c
+allocated memory  : 25,39 MB
+command line      : /usr/sbin/sendmail -oi -fahmed.zoghlami@benetton.com -t
+executable        : sendmail.exe
+exec. date/time   : 2011-06-18 00:10
+compiled with     : Delphi 2006/07
+madExcept version : 3.0l
+callstack crc     : $fecf9b34, $99a56a32, $99a56a32
+exception number  : 1
+exception class   : EIdSMTPReplyError
+exception message : Must issue a STARTTLS command first. Please visit https://support.google.com/a/answer/3221692 and review RFC 3207 specifications for more information. lc27-20020a170906dffb00b00985ed2f1584sm2550643ejc.187 - gsmtp.
+
+main thread ($39b8):
+0045918a +003e sendmail.exe IdReplySMTP     501   +1 TIdReplySMTP.RaiseReplyError
+0043ff28 +0008 sendmail.exe IdTCPConnection 576   +0 TIdTCPConnection.RaiseExceptionForLastCmdResult
+004402f4 +003c sendmail.exe IdTCPConnection 751  +10 TIdTCPConnection.CheckResponse
+0043feba +002a sendmail.exe IdTCPConnection 565   +2 TIdTCPConnection.GetResponse
+0043ff87 +005b sendmail.exe IdTCPConnection 585   +4 TIdTCPConnection.SendCmd
+004b6053 +119f sendmail.exe sendmail        831 +349 initialization
+7725fcc7 +0017 KERNEL32.DLL                          BaseThreadInitThunk
+
+thread $308c:
+7725fcc7 +17 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $5034:
+7725fcc7 +17 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $42f8:
+7725fcc7 +17 KERNEL32.DLL  BaseThreadInitThunk
+
+stack dump:
+0019fd24  8f 91 45 00 de fa ed 0e - 01 00 00 00 07 00 00 00  ..E.............
+0019fd34  38 fd 19 00 8f 91 45 00 - 78 d1 4c 02 60 1e 4e 02  8.....E.x.L.`.N.
+0019fd44  00 00 00 00 12 02 00 00 - 68 fd 19 00 54 fd 19 00  ........h...T...
+0019fd54  a8 fd 19 00 c8 4b 40 00 - 68 fd 19 00 34 a5 45 00  .....K@.h...4.E.
+0019fd64  00 00 00 00 84 fd 19 00 - 2b ff 43 00 f7 02 44 00  ........+.C...D.
+0019fd74  00 00 00 00 8c fe 19 00 - 8c fe 19 00 20 81 45 02  ..............E.
+0019fd84  9c fd 19 00 bd fe 43 00 - 00 00 00 00 f0 05 44 00  ......C.......D.
+0019fd94  00 00 00 00 34 a5 45 00 - c8 fd 19 00 8a ff 43 00  ....4.E.......C.
+0019fda4  00 00 00 00 d8 fd 19 00 - c8 4b 40 00 c8 fd 19 00  .........K@.....
+0019fdb4  cc fd 19 00 00 00 00 00 - 34 a5 45 00 8c fe 19 00  ........4.E.....
+0019fdc4  00 00 00 00 70 ff 19 00 - 59 60 4b 00 00 00 00 00  ....p...Y`K.....
+0019fdd4  00 00 00 00 e4 fd 19 00 - c8 4b 40 00 70 ff 19 00  .........K@.p...
+0019fde4  f0 fd 19 00 c8 4b 40 00 - 70 ff 19 00 fc fd 19 00  .....K@.p.......
+0019fdf4  5f 4d 40 00 70 ff 19 00 - 64 ff 19 00 c8 4b 40 00  _M@.p...d....K@.
+0019fe04  70 ff 19 00 b4 4e 4b 00 - b4 4e 4b 00 00 20 35 00  p....NK..NK...5.
+0019fe14  00 00 00 00 00 00 00 00 - 00 00 00 00 00 00 00 00  ................
+0019fe24  00 00 00 00 00 00 00 00 - 00 00 00 00 00 00 00 00  ................
+0019fe34  00 00 00 00 00 00 00 00 - 00 00 00 00 00 00 00 00  ................
+0019fe44  00 00 00 00 00 00 00 00 - 00 00 00 00 00 00 00 00  ................
+0019fe54  00 00 00 00 00 00 00 00 - 00 00 00 00 00 00 00 00  ................
+
+disassembling:
+[...]
+00459177       call    -$1f480 ($439cfc)      ; IdReply.TIdReply.GetNumericCode
+0045917c       mov     ecx, eax
+0045917e       mov     dl, 1
+00459180       mov     eax, [$458844]
+00459185       call    +$182 ($45930c)        ; IdReplySMTP.EIdSMTPReplyError.CreateError
+0045918a     > call    -$544a3 ($404cec)      ; System.@RaiseExcept
+0045918f 502   xor     eax, eax
+00459191       pop     edx
+00459192       pop     ecx
+00459193       pop     ecx
+00459194       mov     fs:[eax], edx
+[...]
